@@ -7,16 +7,14 @@ Hi, we're Meeshkan.  We reverse engineer software.
 - [Meeshkan](https://github.com/meeshkan/meeshkan) | Build sandboxes of REST APIs.
 - [Unmock](https://github.com/meeshkan/unmock) | Fuzz test REST API integrations.
 - [Micro Jaymock](https://github.com/meeshkan/micro-jaymock) | Generate mock data fast.
-
-[more](https://github.com/meeshkan)
+- [more...](https://github.com/meeshkan)
 
 ## Blog
 
 - [unmock vs nock](/blog/2020-02-08-unmock-vs-nock/)
 - [Comparing Prism, Hoverfly and Meeshkan Part 1](/blog/2020-02-18-comparing-prism-hoverfly-and-meeshkan-part-1)
 - [Introducing HTTP types](/blog/2020-02-18-introducing-http-types)
-
-[more](/blog)
+- [more...](/blog)
 
 ## News
 
@@ -28,6 +26,6 @@ Hi, we're Meeshkan.  We reverse engineer software.
 
 We will hire our next batch of Meeshkanites in Q2 2020. In the meantime, if you would like to be part of the adventure, we always welcome free-form applications. [Send us an email](mailto:jobs@meeshkan.com).
 
-## Website contest
+## This website
 
-This website is supposed to look like this.  That's because we haven't heard any better ideas.  Have one?  [Send us an e-mail](mailto:webmaster@meeshkan.com) or make a [pull request](https://github.com/meeshkan/worlds-greatest-website).
+Have any ideas on how to improve this website?  [Send us an e-mail](mailto:webmaster@meeshkan.com) or make a [pull request](https://github.com/meeshkan/worlds-greatest-website). We use [@11ty](https://github.com/11ty/eleventy).
