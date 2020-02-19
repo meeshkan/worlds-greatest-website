@@ -3,17 +3,21 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-orbs:
-  aws-cli: circleci/aws-cli@0.1.20
 jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:12.4.0
+      - image: circleci/node:12.4.0-python:3.7.6
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
     working_directory: ~/repo
 
     steps:
       - checkout
-      - aws-cli/setup: {}
+      - run: pip install awscli
       - run: npx @11ty/eleventy
       - run: aws s3 sync _site s3:://meeshkan-website --delete
