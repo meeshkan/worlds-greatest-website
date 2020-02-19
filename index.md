@@ -7,14 +7,16 @@ Hi, we're Meeshkan.  We reverse engineer software.
 - [Meeshkan](https://github.com/meeshkan/meeshkan) | Build sandboxes of REST APIs.
 - [Unmock](https://github.com/meeshkan/unmock-js) | Fuzz test REST API integrations.
 - [Micro Jaymock](https://github.com/meeshkan/micro-jaymock) | Generate mock data fast.
-- [more...](https://github.com/meeshkan)
+
+[Check out our GitHub](https://github.com/meeshkan).
 
 ## Blog
 
 - [unmock vs nock](/blog/2020-02-08-unmock-vs-nock/)
 - [Comparing Prism, Hoverfly and Meeshkan Part 1](/blog/2020-02-18-comparing-prism-hoverfly-and-meeshkan-part-1)
 - [Introducing HTTP types](/blog/2020-02-18-introducing-http-types)
-- [more...](/blog)
+
+[Read more on our blog](/blog).
 
 ## News
 
