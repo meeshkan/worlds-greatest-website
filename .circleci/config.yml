@@ -20,6 +20,6 @@ jobs:
       - checkout
       - run: pip install awscli
       - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-      - run: nvm 12.4.0
+      - run: .nvm/nvm.sh use 12.4.0
       - run: npx @11ty/eleventy
       - run: aws s3 sync _site s3:://meeshkan-website --delete
