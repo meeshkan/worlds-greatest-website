@@ -30,4 +30,4 @@ We will hire our next batch of Meeshkanites in Q2 2020. In the meantime, if you 
 
 ## Website contest
 
-This website is supposed to look like this.  That's because we haven't heard any better ideas.  Have one?  [Send us an e-mail](mailto:webmaster@meeshkan.com) or make a [pull request](https://github.com/meeshkan/meeshkan-minimal).
+This website is supposed to look like this.  That's because we haven't heard any better ideas.  Have one?  [Send us an e-mail](mailto:webmaster@meeshkan.com) or make a [pull request](https://github.com/meeshkan/worlds-greatest-website).
