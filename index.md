@@ -12,9 +12,9 @@ Hi, we're Meeshkan.  We reverse engineer software.
 
 ## Blog
 
-- [unmock vs nock](/2020-02-08-unmock-vs-nock/)
-- [Comparing Prism, Hoverfly and Meeshkan Part 1](/2020-02-18-comparing-prism-hoverfly-and-meeshkan-part-1)
-- [Introducing HTTP types](2020-02-18-introducing-http-types)
+- [unmock vs nock](/blog/2020-02-08-unmock-vs-nock/)
+- [Comparing Prism, Hoverfly and Meeshkan Part 1](/blog/2020-02-18-comparing-prism-hoverfly-and-meeshkan-part-1)
+- [Introducing HTTP types](/blog/2020-02-18-introducing-http-types)
 
 [more](/blog)
 
