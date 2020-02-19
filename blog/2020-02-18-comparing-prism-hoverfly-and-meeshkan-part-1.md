@@ -65,8 +65,6 @@ Hoverfly is extensible through a middleware system that communicates through `st
 
 **Conclusion:** Hoverfly is a good tool when you need to serve back recordings of an API for testing.
 
-{% twitter 1229838532983828481 %}
-
 # Meeshkan
 
 If Hoverfly and Prism had a baby, it would be Meeshkan. Meeshkan allows developers to build a mock server from recordings and OpenAPI specs. It exposes a Python API for building a persistance layer behind mocks. We also use it to tie together ML models to simulate realistic server traffic.
@@ -108,4 +106,4 @@ Like Hoverfly and Prism, Meeshkan can be started in server mode.
 $ meeshkan mock -i enhanced_spec/
 ```
 
-**Conclusion:** Meeshkan blends together recordings and OpenAPI specs into an enhanced OpenAPI spec. We'd love to hear your feedback on our [GitHub issues page](https://github.com/meeshkan/meeshkan/issues). **Also, please don't hesitate to leave a comment with feedback!**
+**Conclusion:** Meeshkan blends together recordings and OpenAPI specs into an enhanced OpenAPI spec. We'd love to hear your feedback on our [GitHub issues page](https://github.com/meeshkan/meeshkan/issues).
