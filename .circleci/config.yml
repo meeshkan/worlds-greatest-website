@@ -18,5 +18,6 @@ jobs:
 
     steps:
       - checkout
+      - run: pip install awscli
       - run: npx @11ty/eleventy
       - run: aws s3 sync _site s3:://meeshkan-website --delete
