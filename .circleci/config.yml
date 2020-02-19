@@ -14,7 +14,6 @@ jobs:
 
     steps:
       - checkout
-      - aws-cli/setup:
-        profile-name: example
+      - aws-cli/setup
       - run: npx @11ty/eleventy
       - run: aws s3 sync _site s3:://meeshkan-website --delete
