@@ -14,7 +14,7 @@ tags:
 
 _This is the first article of a two-part series comparing Prism, Hoverfly, and Meeshkan. This article presents a high-level comparison. The [second one](https://dev.to/meeshkan/comparing-prism-hoverfly-and-meeshkan-part-2-139i) shows they can be used with a specific API._
 
-![Meeshkan team](https://dev-to-uploads.s3.amazonaws.com/i/bni2ip09m23dml1nozod.jpg)
+![Meeshkan team](https://cdn.filestackcontent.com/AZvPNtU2oRLCcNYkJFCAAz/resize=width:1000/https://dev-to-uploads.s3.amazonaws.com/i/bni2ip09m23dml1nozod.jpg)
 _Our team during a brief, spontaneous moment of levity._
 
 At Meeshkan, we reverse engineer software. Our mission is to build a tool that can clone even the most complex systems with a high degree of accuracy.
