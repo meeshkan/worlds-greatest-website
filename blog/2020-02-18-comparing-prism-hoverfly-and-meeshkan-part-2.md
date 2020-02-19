@@ -13,7 +13,7 @@ tags:
 ---
 _This is the second article of a two-part series comparing Prism, Hoverfly, and Meeshkan. This article focuses on using all three tools to build a mock of the github API v3, whereas the [first article](https://dev.to/meeshkan/comparing-prism-hoverfly-and-meeshkan-part-1-27g6) focuses on a high level comparison of the tools._
 
-![Meeshkan team](https://dev-to-uploads.s3.amazonaws.com/i/2ek2wxex4koaks7v2msf.jpg)
+![Meeshkan team](https://cdn.filestackcontent.com/AZvPNtU2oRLCcNYkJFCAAz/resize=width:1000/https://dev-to-uploads.s3.amazonaws.com/i/2ek2wxex4koaks7v2msf.jpg)
 _Team Meeshkan busy building Meeshkan._
 
 In the [previous article](https://dev.to/meeshkan/comparing-prism-hoverfly-and-meeshkan-part-1-27g6), we saw how to create a Prism server from an OpenAPI spec. We also saw how Hoverfly can play back recordings of server traffic.  Lastly, we saw how Meeshkan blends OpenAPI specs and recordings into a mock server.
