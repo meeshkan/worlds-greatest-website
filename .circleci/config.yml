@@ -22,4 +22,4 @@ jobs:
       - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
       - run: export NVM_DIR="$HOME/.nvm" ; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" ; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" ; nvm install 12.4.0 ; nvm use 12.4.0 ; npx @11ty/eleventy
       - run: aws s3 sync ./_site s3://meeshkan.com --delete --acl public-read
-      - run: aws cloudfront create-invalidation --distribution-id E1WJCTPG03HEXS --paths "/index.html /blog/index.html"
+      - run: aws cloudfront create-invalidation --distribution-id E1WJCTPG03HEXS --paths "/"
