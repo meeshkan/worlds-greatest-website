@@ -1,5 +1,6 @@
 ---
 title:  Introduction to composable optics with monocle-ts
+description: With io-ts, Elvis and Metallica.
 author: Kimmo Sääskilahti
 authorLink: https://dev.to/ksaaskil
 date: 2020-02-16

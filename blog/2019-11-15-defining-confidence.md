@@ -1,5 +1,6 @@
 ---
 title: Defining Confidence in Software Testing
+description: Trying to make sense of all the vague terminology in testing land, starting with confidence.
 date: 2019-11-15
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran

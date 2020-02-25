@@ -1,5 +1,6 @@
 ---
 title: How to remove condescending language from documentation 
+description: A Hacktoberfest adventure in creating more inclusive open-source documentation.
 date: 2019-11-22
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran

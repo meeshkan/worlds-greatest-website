@@ -1,5 +1,6 @@
 ---
 title: Introducing wtfuzz - A video series about testing and open learning
+description: We're launching a new YouTube series that'll cover testing fundamentals and unmock-js.
 date: 2019-10-25
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran

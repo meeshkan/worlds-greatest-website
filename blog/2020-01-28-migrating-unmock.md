@@ -1,5 +1,6 @@
 ---
 title: We're migrating Unmock to Meeshkan 
+description: A short announcement and story of open-source resilience.
 date: 2020-01-28
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran

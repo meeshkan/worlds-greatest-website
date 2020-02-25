@@ -1,5 +1,6 @@
 ---
 title: Setting up the alex.js language linter in your project
+description: A practical how-to for linting polarizing language in your Markdown files.
 date: 2019-11-11
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
