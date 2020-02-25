@@ -13,6 +13,6 @@
           By <a href="{{ authorLink }}">{{ author }}</a>
         {% endif %}
         
-        {{ content }}
+        {{ content | safe }}
     </body>
 </html>

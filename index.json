@@ -1,3 +1,3 @@
 {
-    "layout": "index-layout.liquid"
+    "layout": "index-layout.njk"
 }
