@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
         <title>Meeshkan Blog</title>
     </head>
     <body>
@@ -9,7 +10,7 @@
         <h2>{{ title }}</h2>
 
         {% if author %}
-          <i>By <a href="{{ authorLink }}">{{ author }}</a></i>
+          By <a href="{{ authorLink }}">{{ author }}</a>
         {% endif %}
         
         {{ content }}
