@@ -1,5 +1,5 @@
 ---
-layout: index-layout.liquid
+layout: index-layout.njk
 ---
 
 Hi, we're Meeshkan.  We reverse engineer software.
