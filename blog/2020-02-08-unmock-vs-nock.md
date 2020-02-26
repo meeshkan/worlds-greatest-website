@@ -1,5 +1,6 @@
 ---
 title: unmock vs nock - comparing two JS mocking frameworks
+description: Learn how to write integration tests with unmock and nock.
 date: 2020-02-08
 author: Mike Solomon
 authorLink: https://dev.to/mikesol

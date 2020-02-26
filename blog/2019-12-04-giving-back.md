@@ -1,5 +1,6 @@
 ---
 title: Giving back to the open-source tools we run on 
+description: My 24 Pull Requests alternative.
 date: 2019-12-04
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran

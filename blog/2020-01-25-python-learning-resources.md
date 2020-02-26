@@ -1,5 +1,6 @@
 ---
 title:  Resources for learning Python in 2020
+description: A (non-exhaustive) list of resources for Python newbies.
 date: 2020-01-25
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran

@@ -1,5 +1,6 @@
 ---
 title: What is the Testing Pyramid even? 
+description: Because no one wants to fail a technical interview because of a metaphor.
 date: 2019-11-05
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
