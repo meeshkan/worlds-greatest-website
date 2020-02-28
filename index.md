@@ -14,7 +14,7 @@ Hi, we're Meeshkan.  We reverse engineer software.
 
 ## Blog
 
-- [unmock vs nock](/blog/2020-02-08-unmock-vs-nock/)
+- [Announcing Meeshkan, a new tool for mocking HTTP APIs](/blog/2020-02-28-announcing-meeshkan/)
 - [Comparing Prism, Hoverfly and Meeshkan Part 1](/blog/2020-02-18-comparing-prism-hoverfly-and-meeshkan-part-1)
 - [Introducing HTTP types](/blog/2020-02-18-introducing-http-types)
 
