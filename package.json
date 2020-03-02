@@ -1,0 +1,24 @@
+{
+  "name": "worlds-greatest-website",
+  "version": "0.0.0",
+  "description": "Worlds greatest website.",
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/meeshkan/worlds-greatest-website.git"
+  },
+  "author": "Meeshkan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meeshkan/worlds-greatest-website/issues"
+  },
+  "homepage": "https://github.com/meeshkan/worlds-greatest-website/",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
