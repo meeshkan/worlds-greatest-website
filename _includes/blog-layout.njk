@@ -1,18 +1,10 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Meeshkan Blog</title>
-    </head>
-    <body>
-        <h1>Meeshkan Blog</h1>
-        <h2>{{ title }}</h2>
+---
+layout: base.njk
+templateClass: tmpl-blog
+---
+<h1>{{ title }}</h1>
 
-        {% if author %}
-          By <a href="{{ authorLink }}">{{ author }}</a>
-        {% endif %}
-        
-        {{ content | safe }}
-    </body>
-</html>
+{% if author %}
+By <a href="{{ authorLink }}">{{ author }}</a>
+{% endif %}
+{{ content | safe }}
