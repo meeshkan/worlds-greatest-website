@@ -3,5 +3,6 @@ module.exports = function(eleventyConfig) {
     "md",
     "html",
     "css", // css is not yet a recognized template extension in Eleventy
+    "njk"
   ]);
 };

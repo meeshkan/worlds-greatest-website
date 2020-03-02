@@ -1,5 +1,8 @@
 ---
 layout: index-layout.njk
+eleventyNavigation:
+  key: Home
+  order: 1
 ---
 
 # Meeshkan

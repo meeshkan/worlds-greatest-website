@@ -1,7 +1,9 @@
----
-layout: base.njk
-templateClass: tmpl-postlist
----
-<h1>Meeshkan blog</h1>
-
-{{ content | safe }}
+{% for post in postslist | reverse %}
+  <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <em>
+        {{ post.date }} 
+        {% if post.data.author %} 
+            &mdash; {{ post.data.author }} 
+        {% endif %}
+    </em>
+{% endfor %}
