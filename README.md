@@ -18,5 +18,10 @@ Run build:
 $ npm run build
 ```
 
-See other available scripts in [package.json](./package.json).
+Serve site with hot reload:
 
+```bash
+$ npm run serve
+```
+
+See other available scripts in [package.json](./package.json).
