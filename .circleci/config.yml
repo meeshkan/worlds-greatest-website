@@ -1,27 +1,37 @@
-# JavaScript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:8.12.0
+
 jobs:
   build:
-    branches:
-      only: master
-    docker:
-      # specify the version you desire here
-      - image: circleci/python:3.7.6
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+    <<: *defaults
     steps:
       - checkout
+      - run: npm run install
+      - run: npm run build
+      # - run: export NVM_DIR="$HOME/.nvm" ; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" ; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" ; nvm install 12.4.0 ; nvm use 12.4.0 ; npx @11ty/eleventy
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
       - run: pip install awscli
-      - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-      - run: export NVM_DIR="$HOME/.nvm" ; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" ; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" ; nvm install 12.4.0 ; nvm use 12.4.0 ; npx @11ty/eleventy
+      # - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+      # - run: export NVM_DIR="$HOME/.nvm" ; [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" ; [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" ; nvm install 12.4.0 ; nvm use 12.4.0 ; npx @11ty/eleventy
       - run: aws s3 sync ./_site s3://meeshkan.com --delete --acl public-read
       - run: aws cloudfront create-invalidation --distribution-id E1WJCTPG03HEXS --paths "/*"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
