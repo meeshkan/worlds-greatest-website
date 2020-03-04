@@ -1,0 +1,10 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+<h1>{{ title }}</h1>
+
+{% if author %}
+By <a href="{{ authorLink }}">{{ author }}</a>
+{% endif %}
+{{ content | safe }}

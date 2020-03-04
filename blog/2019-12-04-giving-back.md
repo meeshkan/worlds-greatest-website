@@ -5,7 +5,6 @@ date: 2019-12-04
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - gratitude
   - opensource
 ---

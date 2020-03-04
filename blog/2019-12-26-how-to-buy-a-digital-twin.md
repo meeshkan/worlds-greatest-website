@@ -5,7 +5,6 @@ author: Mike Solomon
 authorLink: https://dev.to/mikesol
 date: 2019-12-26
 tags:
-  - posts
   - digitaltwin
   - machinelearning
   - hubspot

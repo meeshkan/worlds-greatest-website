@@ -5,7 +5,6 @@ date: 2020-01-28
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - news
   - opensource
 ---

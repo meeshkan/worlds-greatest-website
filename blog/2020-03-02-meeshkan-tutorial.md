@@ -4,7 +4,6 @@ description: An interactive tutorial for the Meeshkan collect, build, and mock w
 author: Mike Solomon
 authorLink: https://dev.to/mikesol
 tags:
-  - posts
   - python
   - testing
   - api

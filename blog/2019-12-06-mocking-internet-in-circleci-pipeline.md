@@ -5,7 +5,6 @@ author: Mike Solomon
 authorLink: https://dev.to/mikesol
 date: 2019-12-06
 tags:
-  - posts
   - unmock
   - circleci
   - integrationtest

@@ -5,7 +5,6 @@ date: 2020-01-25
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - python
   - beginners
 ---
@@ -64,4 +63,4 @@ So [I asked folks on Twitter](https://twitter.com/carolstran/status/122031011235
 <a name="recommendations"></a>
 ## Your Recommendations 💬
 
-Have any resources you think should be on this list? [Open a pull request](https://github.com/Meeshkan/worlds-greatest-website) and we'll add it.  
+Have any resources you think should be on this list? [Open a pull request](https://github.com/Meeshkan/worlds-greatest-website) and we'll add it.

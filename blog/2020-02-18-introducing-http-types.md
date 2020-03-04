@@ -5,7 +5,6 @@ author: Mike Solomon
 authorLink: https://dev.to/mikesol
 date: 2020-02-18
 tags:
-  - posts
   - javascript
   - python
   - api

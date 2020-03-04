@@ -1,6 +1,11 @@
 ---
-layout: index-layout.njk
+layout: layouts/index.njk
+eleventyNavigation:
+  key: Home
+  order: 1
 ---
+
+# Meeshkan
 
 Hi, we're Meeshkan.  We reverse engineer software.
 

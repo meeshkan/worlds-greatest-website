@@ -5,7 +5,6 @@ date: 2020-02-08
 author: Mike Solomon
 authorLink: https://dev.to/mikesol
 tags:
-  - posts
   - javascript
   - typescript
   - testing
