@@ -6,5 +6,7 @@ module.exports = function(eleventyConfig) {
     "njk"
   ]);
 
+  eleventyConfig.setDataDeepMerge(true);
+
   eleventyConfig.addFilter("readableDate", dateObj => dateObj.toLocaleDateString());
 };

@@ -5,7 +5,6 @@ date: 2019-10-25
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - video
   - javascript
   - testing

@@ -5,7 +5,6 @@ date: 2020-02-09
 author: Kimmo Sääskilahti
 authorLink: https://dev.to/ksaaskil
 tags:
-  - posts
   - python
   - generics
   - corgis

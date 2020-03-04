@@ -4,7 +4,6 @@ description: A coming-out party for the world's greatest API mocking tool that n
 author: Mike Solomon
 authorLink: https://dev.to/mikesol
 tags:
-  - posts
   - news
   - testing
   - opensource

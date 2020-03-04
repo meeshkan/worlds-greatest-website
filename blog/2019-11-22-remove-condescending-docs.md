@@ -5,7 +5,6 @@ date: 2019-11-22
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - documentation
   - opensource
   - tutorial
@@ -155,4 +154,4 @@ Reference: [A pull request I created for Prisma.](https://github.com/prisma/pris
 <a name="thank-you"></a>
 ## Finally, a thank you 🎉
 
-Thanks for taking the time to read this guide and taking steps towards more inclusive open-source documentation! We need more wonderful, caring people like you. This effort also requires awareness. So I'd encourage you to share your journey with your colleagues, friends, Twitter followers - whoever will listen. 
+Thanks for taking the time to read this guide and taking steps towards more inclusive open-source documentation! We need more wonderful, caring people like you. This effort also requires awareness. So I'd encourage you to share your journey with your colleagues, friends, Twitter followers - whoever will listen.

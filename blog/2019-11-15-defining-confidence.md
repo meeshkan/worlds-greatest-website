@@ -5,7 +5,6 @@ date: 2019-11-15
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - video
   - testing
   - webdev
@@ -105,4 +104,4 @@ But for now, thank you so much for watching!
 
 You can check out the [Gist of resources](https://gist.github.com/carolstran/9eed93d603146a0fcc1b999c049b1e3d) that I used for this post.
 
-And… yeah. See you next time! 
+And… yeah. See you next time!

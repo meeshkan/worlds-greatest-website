@@ -5,7 +5,6 @@ date: 2019-11-11
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - documentation
   - opensource
   - tools

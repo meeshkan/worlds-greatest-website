@@ -5,7 +5,6 @@ date: 2019-10-23
 author: Kimmo Sääskilahti
 authorLink: https://dev.to/ksaaskil
 tags:
-  - posts
   - javascript
   - reactnative
   - testing

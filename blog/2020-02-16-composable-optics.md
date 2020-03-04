@@ -5,7 +5,6 @@ author: Kimmo Sääskilahti
 authorLink: https://dev.to/ksaaskil
 date: 2020-02-16
 tags:
-  - posts
   - typescript
   - functional
   - javascript

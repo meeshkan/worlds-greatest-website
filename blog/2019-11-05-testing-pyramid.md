@@ -5,7 +5,6 @@ date: 2019-11-05
 author: Carolyn Stransky
 authorLink: https://twitter.com/carolstran
 tags:
-  - posts
   - video
   - testing
   - webdev
