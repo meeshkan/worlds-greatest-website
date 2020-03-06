@@ -7,7 +7,7 @@ eleventyNavigation:
 
 # Meeshkan
 
-Hi, we're Meeshkan.  We reverse engineer software.
+Hi, we're Meeshkan.  We make API sandboxes.
 
 ## Open source
 
