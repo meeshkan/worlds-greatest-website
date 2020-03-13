@@ -7,7 +7,7 @@ eleventyNavigation:
 
 # Meeshkan
 
-Hi, we're Meeshkan.  We make API sandboxes.
+Hi, we're Meeshkan.  We build API sandboxes.
 
 ## Open source
 
@@ -33,7 +33,7 @@ Hi, we're Meeshkan.  We make API sandboxes.
 
 ## Jobs
 
-We will hire our next batch of Meeshkanites in Q2 2020. In the meantime, if you would like to be part of the adventure, we always welcome free-form applications. [Send us an email](mailto:jobs@meeshkan.com).
+- [Head of Developer Relations](https://www.womenwhocode.com/jobs/6167)
 
 ## This website
 
