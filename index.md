@@ -27,9 +27,8 @@ Hi, we're Meeshkan.  We build API sandboxes.
 
 ## News
 
+- Our first publication in [Towards Data Science](https://towardsdatascience.com/word-embeddings-with-code2vec-glove-and-spacy-5b26420bf632) appeared! A big congrats to Maria Malitckaya for the great article.
 - We were granted our **first patent** for a distributed machine learning algorithm. The algorithm cuts costs significantly compared to traditional single-tenant methods. We've used this algorithm internally to build corners of the fake internet in a distributed fashion.
-- Our open-source engineer Carolyn Stransky caused quite a stir with [**this article**](https://dev.to/meeshkan/how-to-remove-condescending-language-from-documentation-4a5p). We're proud of you, Carolyn. Keep up the good work!
-- The **Unmock Orb** is now live on [CircleCI](https://circleci.com/orbs/registry/orb/unmock/unmock). It is a fast and free way to mock REST APIs in their CI/CD pipelines. Hats off to Kimmo Sääskilahti for building it.- We're honored to have made first place in the 2019 **Helsinki's Hottest Startup** list by [Wired magazine](https://www.wired.co.uk/article/best-startups-in-helsinki-2019)
 
 ## Jobs
 
