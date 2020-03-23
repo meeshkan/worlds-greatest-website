@@ -10,7 +10,7 @@ tags:
   - python
 ---
 
-_This article was originally published in [Towards Data Science](https://towardsdatascience.com/word-embeddings-with-code2vec-glove-and-spacy-5b26420bf632) on March 18, 2020._
+_This article was originally published in [Towards Data Science]({{ canonicalURL }}) on March 18, 2020._
 
 One powerful way to improve your machine learning model is to use [word embeddings](https://en.wikipedia.org/wiki/Word_embedding). With word embeddings, you're able to capture the context of the word in the document and then find semantic and syntactic similarities.
 
