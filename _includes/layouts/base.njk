@@ -4,7 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ renderData.title or title or metadata.title }}</title>
-        <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+
+        {%- set css %}
+            {% include 'index.css' %}
+            {% include 'prism-theme.css' %}
+        {% endset %}
+
+        <style>{{ css | safe }}</style>
     </head>
     <body>
         <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
