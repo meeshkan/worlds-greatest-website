@@ -12,6 +12,8 @@ tags:
 
 _This article was originally published in [Towards Data Science]({{ canonicalURL }}) on March 18, 2020._
 
+![source: lukasbieri via pixabay (CC0)](https://miro.medium.com/max/3840/1*eKjt3uCh5k8PNqa5B00azQ.jpeg)
+
 One powerful way to improve your machine learning model is to use [word embeddings](https://en.wikipedia.org/wiki/Word_embedding). With word embeddings, you're able to capture the context of the word in the document and then find semantic and syntactic similarities.
 
 In this post, we'll cover an unusual application of the word embeddings techniques. We'll try to find the best word embedding techniques for [OpenAPI specifications](https://swagger.io/specification/). As anexample of openAPI specification , we'll use a free source of OpenAPI specifications from [apis-guru](https://apis.guru/)😎.
@@ -291,6 +293,8 @@ for k, v in test_dictionary.items():
         print(k, 'no')
 ```
 The results are summarized in the following table. spaCy shows that the word ‘client’ is in the first 100 most similar words for the word ‘user’. It is useful for almost all of the OpenAPI specifications and can be used for the future analysis of OpenAPI specification similarity. The vector for the word ‘balance’ is close to the vector for the word ‘amount’. We find it especially useful for payment API.
+
+![table](https://miro.medium.com/max/758/1*FIQW-Tn0AUc8KzfeMOiTXA.png)
 
 <a name="conclusion"></a>
 
