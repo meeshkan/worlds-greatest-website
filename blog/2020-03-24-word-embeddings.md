@@ -1,6 +1,6 @@
 ---
 title: Word embeddings with code2vec, GloVe and spaCy
-description: Let's see which of these algorithms is better for OpenAPI datasets and which one works faster for OpenAPI specification.
+description: How to choose a word embeddings algorithm based on your use case.
 author: Maria Malitckaya
 authorLink: https://medium.com/@maria.malitckaya
 canonicalURL: https://towardsdatascience.com/word-embeddings-with-code2vec-glove-and-spacy-5b26420bf632
@@ -14,7 +14,7 @@ _This article was originally published in [Towards Data Science]({{ canonicalURL
 
 One powerful way to improve your machine learning model is to use [word embeddings](https://en.wikipedia.org/wiki/Word_embedding). With word embeddings, you're able to capture the context of the word in the document and then find semantic and syntactic similarities.
 
-In this post, we'll cover an unusual application of the word embeddings techniques. We'll try to find the best word embedding techniques for [OpenAPI specifications](https://swagger.io/specification/). As anexample of openAPI specification , we'll use a free source of OpenAPI specifications from [apis-guru](https://apis.guru/).
+In this post, we'll cover an unusual application of the word embeddings techniques. We'll try to find the best word embedding techniques for [OpenAPI specifications](https://swagger.io/specification/). As anexample of openAPI specification , we'll use a free source of OpenAPI specifications from [apis-guru](https://apis.guru/)😎.
 
 The biggest challenge is that OpenAPI specifications are neither a natural language or code. But this also means that we're free to use any of the available embeddings models. For this experiment, we'll look into three possible candidates that may work: code2vec, GloVe, and spaCy. 
 
@@ -24,7 +24,7 @@ Then there's [GloVe](https://nlp.stanford.edu/projects/glove/). GloVe is a commo
 
 Finally, we have [spaCy](https://spacy.io/usage/vectors-similarity). While spaCy was only recently developed, the algorithm already has a reputation for being the fastest word embedding in the world. 
 
-Let's see which of these algorithms is better for OpenAPI datasets and which one works faster for OpenAPI specifications. I divided this post into seven sections, each of them will contain code examples and some tips for future use, plus a conclusion.
+Let's see which of these algorithms is better for OpenAPI datasets and which one works faster for OpenAPI specifications👀. I divided this post into seven sections, each of them will contain code examples and some tips for future use, plus a conclusion.
 
 1. [Download the dataset](#1-download-the-dataset)
 2. [Download vocabularies](#2-download-vocabularies)
@@ -37,16 +37,16 @@ Let's see which of these algorithms is better for OpenAPI datasets and which one
 Now, we can start.
 
 <a name="1-download-the-dataset"></a>
-## 1. Download the dataset
+## 1. Download the dataset✅
 
 First, we'll need to download the whole [apis-guru](https://apis.guru/) database. 
 
 You'll notice that most of the apis-guru specifications are in the Swagger 2.0 format. But.. the latest version of OpenAPI specification is [OpenAPI 3.0](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md). So let's convert the whole dataset to this format by using Unmock scripts! You can follow the instructions for how to complete this on the [unmock-openapi-scripts README](https://github.com/meeshkan/unmock-openapi-scripts/blob/master/README.md).
 
-This may take a while (we're talking hours) and in the end, you will get a big dataset with various specifications. 
+This may take a while (you won’t become 🧓, but we’re talking hours ⏰) and in the end, you will get a big dataset with various specifications🎓. 
 
 <a name="2-download-vocabularies"></a>
-## 2. Download vocabularies
+## 2. Download vocabularies✅
 
 ### code2vec
 1. Download [Code2vec](https://github.com/tech-srl/code2vec) model from their github page. Follow instructions in README.md in the section Quickstart and then export trained tokens.
@@ -74,20 +74,15 @@ nlp = spacy.load('en_core_web_lg').
 ```
 
 <a name="3-extract-the-field-names"></a>
-## 3. Extract the field names
+## 3. Extract the field names✅
 
 The whole list of OpenAPI specification names can be obtained from the `scripts/fetch-list.sh` file or by using the following function (for Windows):
 ```python
 def getListOfFiles(dirName):
-    # Create a list of file and sub directories 
-    # Names in the given directory 
     listOfFile = os.listdir(dirName)
     allFiles = list()
-    # Iterate over all the entries
     for entry in listOfFile:
-        # Create full path
         fullPath = posixpath.join(dirName, entry)
-        # If entry is a directory then get the list of files in this directory 
         if posixpath.isdir(fullPath):
             allFiles = allFiles + getListOfFiles(fullPath)
         else:
@@ -123,8 +118,9 @@ def get_fields(o: OpenAPIObject) -> Sequence[str]:
 ```
 
 <a name="4-tokenize-keys"></a>
+Congrats! Now our dataset is ready .
 
-##  4. Tokenize keys
+##  4. Tokenize keys✅
 The field names may contain punctuation, such as `_` and `-` symbols, or camel case words. We can chop these words up into pieces called tokens.  
 
 The following `camel-case` function identifies these camel case words. First, it checks if there's any punctuation. If yes, then it's not a camel case. Then, it checks if there are any capital letters inside the word (excluding the first and last characters).
@@ -190,7 +186,7 @@ tokenizer(my_word)
 
 <a name="5-create-a-dataset-of-the-field-names"></a>
 
-## 5. Create a dataset of the field names
+## 5. Create a dataset of the field names✅
 
 Now, let's create a big dataset with fields name from all the specifications. 
 
@@ -213,7 +209,7 @@ def dict_dataset(datasets):
 
 <a name="6-test-embeddings"></a>
 
-## 6. Test embeddings
+## 6. Test embeddings✅
 ### code2vec and GloVe
 
 Now we can find out-of-vocabulary words(not_identified_c2v) and count the percentage of these words for code2vec vocabulary.
@@ -278,17 +274,15 @@ To do this, we need to format the input vector for use in the distance function.
 ```python
 from scipy.spatial import distance
 
-ids = [x for x in nlp.vocab.vectors.keys()]
-vectors = [nlp.vocab.vectors[x] for x in ids]
-vectors = np.array(vectors)
-
-# Find the closest word below
+for k, v in test_dictionary.items():
+    input_word = k
+    p = np.array([nlp.vocab[input_word].vector])
     closest_index = distance.cdist(p, vectors)[0].argsort()[::-1][-100:]
     word_id = [ids[closest_ind] for closest_ind in closest_index]
     output_word = [nlp.vocab[i].text for i in word_id]
     #output_word
     list1=[j.lower() for j in output_word]
-    mylist = list(dict.fromkeys(list1))
+    mylist = list(dict.fromkeys(list1))[:50]
     count=0
     if test_dictionary[k] in mylist:
         count+=1
@@ -296,7 +290,7 @@ vectors = np.array(vectors)
     else:
         print(k, 'no')
 ```
-The results were summarized in the following table. spaCy shows that the word 'client' is in the first 100 most similar words for the word 'user'. It is useful for almost all of the OpenAPI specifications and can be used for the future analysis of OpenAPI specification similarity. The word 'balance' hos close vector for the word 'amount'. we find it especially useful for payment API
+The results are summarized in the following table. spaCy shows that the word ‘client’ is in the first 100 most similar words for the word ‘user’. It is useful for almost all of the OpenAPI specifications and can be used for the future analysis of OpenAPI specification similarity. The vector for the word ‘balance’ is close to the vector for the word ‘amount’. We find it especially useful for payment API.
 
 <a name="conclusion"></a>
 
