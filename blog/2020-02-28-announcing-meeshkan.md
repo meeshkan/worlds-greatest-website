@@ -90,7 +90,7 @@ I don't mean to endorse one religious tradition over another. But at the end of 
 
 ## How can I stay updated?
 
-You can [sign up for our mailing list](https://www.subscribepage.com/meeshkan). You can sign up for our mailing list. We'll only email you once a month with exciting feature updates or particularly juicy articles. We won't send you spam and you can unsubscribe at any time.
+You can [sign up for our mailing list](https://www.subscribepage.com/meeshkan). We'll only email you once a month with exciting feature updates or particularly juicy articles. We won't send you spam and you can unsubscribe at any time.
 
 ## Is meeshkan.com broken?
 
