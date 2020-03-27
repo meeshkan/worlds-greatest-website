@@ -1,5 +1,5 @@
 ---
-title: TypedDict vs dataclasses in Python — Epic Typing BATTLE!
+title: TypedDict vs dataclasses in Python — Epic typing BATTLE!
 description: Why we migrated from TypedDict to datatypes in our latest project.
 author: Mike Solomon
 authorLink: https://dev.to/mikesol
@@ -18,13 +18,14 @@ We recently migrated our [Meeshkan](https://github.com/meeshkan/meeshkan) produc
   - [Adding type definitions](#adding-type-definitions)
   - [Working with `dataclasses`](#working-with-dataclasses)
 - [`TypedDict`](#typeddict)
-  - [Brief introduction to duck typing](#brief-introduction-to-duck-typing)
+  - [A brief introduction to duck typing](#a-brief-introduction-to-duck-typing)
   - [Working with `TypedDict`](#working-with-typeddict)
 - [Migrating from `TypedDict` to `dataclasses`](migrating-from-typedict-to-dataclasses)
   - [Matching](#matching)
   - [Validation](#validation)
 - [Conclusion](#conclusion)
 
+<a name="types-in-python"></a>
 
 ## Types in Python
 
@@ -75,9 +76,13 @@ Found 1 error in 1 file (checked 1 source file)
 
 Types help us catch bugs earlier and reduces the number of unit tests to maintain.
 
+<a name="classes-and-dataclasses"></a>
+
 ## Classes and `dataclasses`
 
-Python typing works for classes as well.  Let's see how static typing with classes can move two errors from runtime to compile time.
+Python typing works for classes as well. Let's see how static typing with classes can move two errors from runtime to compile time.
+
+<a name="setting-up-our-example"></a>
 
 ### Setting up our example
 
@@ -136,7 +141,9 @@ def area(x, y):
   return (x.right - x.left) * (y.up - y.down)
 ```
 
-After running our code again, we get the result of `27`. This is what we would expect the area of a 9x3 rectangle to be 🎉
+After running our code again, we get the result of `27`. This is what we would expect the area of a 9x3 rectangle to be.
+
+<a name="adding-type-definitions"></a>
 
 ### Adding type definitions
 
@@ -172,7 +179,9 @@ area.py:10: error: "RangeY" has no attribute "left"
 Found 3 errors in 1 file (checked 1 source file)
 ```
 
-It spots the same three errors before we even run our code 🎉
+It spots the same three errors before we even run our code.
+
+<a name="working-with-dataclasses"></a>
 
 ### Working with `dataclasses`
 
@@ -203,7 +212,7 @@ y = RangeY(down = -3, up = 6)
 print(area(x, y))
 ```
 
-`mypy` gives this file a clean bill of health:
+According to `mypy`, our file is now error-free:
 
 ```bash
 $ mypy area.py
@@ -219,9 +228,15 @@ $ python area.py
 
 `class` and `dataclass` are nice ways to represent objects as types. They suffer from several limitations, though, that `TypedDict` solves.
 
+<a name="typeddict"></a>
+
 ## `TypedDict`
 
-### Brief introduction to duck typing
+But first...
+
+<a name="a-brief-introduction-to-duck-typing"></a>
+
+### A brief introduction to duck typing
 
 In the world of types, there is a notion called [duck typing](https://realpython.com/lessons/duck-typing/). Here's the idea: If an object looks like a duck and quacks like a duck, it's a duck. 
 
@@ -257,7 +272,7 @@ Person(name="Haley", age=42000) == Comet(name="Haley", age=42000) # False
 
 This example should return `False`. But without duck typing, JSON or `dict` versions of `Comet` and `Person` would be the same. 
 
-We can see this when we our example with [`asdict](https://docs.python.org/3/library/dataclasses.html#dataclasses.asdict):
+We can see this when we check our example with [`asdict`](https://docs.python.org/3/library/dataclasses.html#dataclasses.asdict):
 
 ```python
 from dataclass import asdict
@@ -266,6 +281,8 @@ asdict(Person(name="Haley", age=42000)) == asdict(Comet(name="Haley", age=42000)
 ```
 
 Duck typing helps us encode classes to another format without losing information. That is, we can create a field called `type` that represents a `"person"` or a `"comet"`.
+
+<a name="working-with-typeddict"></a>
 
 ### Working with `TypedDict`
 
@@ -328,7 +345,7 @@ class _Person(TypedDict, total=False):
   bank: str
   console: str
 
-class Person(_Car):
+class Person(_Person):
   name: str
   age: int
 
@@ -341,6 +358,7 @@ Now when we print our `Person`, we only see the fields that exist:
 ```bash
 Person(name='Larry', age=25, car='Kia Spectra')
 ```
+<a name="migrating-from-typeddict-to-dataclasses"></a>
 
 ## Migrating from `TypedDict` to `dataclasses`
 
@@ -348,7 +366,9 @@ You may have guessed by now, but generally, we prefer duck typing over classes. 
 
 The two reasons we migrated from `TypedDict` to `dataclasses` are matching and validation:
 - **Matching** means determining an object's class when there's a union of several classes.
-- **Validation** means making sure that unknown data structures, like JSON, will map to a lass.
+- **Validation** means making sure that unknown data structures, like JSON, will map to a class.
+
+<a name="matching"></a>
 
 ### Matching
 
@@ -380,7 +400,9 @@ In Python, `isinstance` can discriminate between union types. This is critical f
 
 In [Meeshkan](https://github.com/meeshkan/meeshkan), we work with union types all the time in [OpenAPI](https://www.openapis.org/). For example, most object specifications can be a `Schema` _or_ a `Reference` to a schema. All over our codebase, you'll see `isinstance(r, Reference)` to make this distinction.
 
-`TypedDict` doesn't work with `isinstance`, and for good reason. Under the hood, `isinistance` looks up the class name of the Python object. That's a very fast operation. With duck typing, you'd have to inspect the whole object to see if "it's a duck." While this is fast for small objects, it is too slow for large objects like OpenAPI specifications. The `isinstance` pattern has sped up our code _a lot_.
+`TypedDict` doesn't work with `isinstance` - and for good reason. Under the hood, `isinistance` looks up the class name of the Python object. That's a very fast operation. With duck typing, you'd have to inspect the whole object to see if "it's a duck." While this is fast for small objects, it is too slow for large objects like OpenAPI specifications. The `isinstance` pattern has sped up our code _a lot_.
+
+<a name="validation"></a>
 
 ### Validation
 
@@ -427,8 +449,10 @@ The above `to_person` will raise an error, whereas the `TypedDict` version won't
 
 When we changed from `TypedDict` to `dataclasses` in [Meeshkan](https://github.com/meeshkan/meeshkan), some tests started to fail. Looking them over, we realized that they never should have succeeded. Their success was due to the use of `cast`, whereas the `class` approach surfaced several bugs.
 
+<a name="conclusion"></a>
+
 ## Conclusion
 
 While we love the idea of `TypedDict` and duck typing, it has practical limitations in Python. This makes it a poor choice for most large-scale applications. We would recommend using `TypedDict` in situations where you're already using `dicts`. In these cases, `TypedDict` can add a degree of type safety without having to rewrite your code. For a new project, though, I'd recommend using `dataclasses`. It works better with Python's type system and will lead to more resilient code.
 
-Disagree with us? Are there any strengths or weaknesses of either approaches that we're missing? Leave us comment!
+Disagree with us? Are there any strengths or weaknesses of either approach that we're missing? Leave us a comment!
