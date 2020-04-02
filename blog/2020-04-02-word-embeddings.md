@@ -3,6 +3,7 @@ title: Word embeddings with code2vec, GloVe and spaCy
 description: How to choose a word embeddings algorithm based on your use case.
 author: Maria Malitckaya
 authorLink: https://medium.com/@maria.malitckaya
+date: 2020-04-02
 canonicalURL: https://towardsdatascience.com/word-embeddings-with-code2vec-glove-and-spacy-5b26420bf632
 tags:
   - datascience
