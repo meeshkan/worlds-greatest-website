@@ -11,6 +11,10 @@
         {% endset %}
 
         <style>{{ css | safe }}</style>
+        
+        {% if canonicalURL %}
+            <link rel="canonical" href="{{ canonicalURL }}" />
+        {% endif %}
     </head>
     <body>
         <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
