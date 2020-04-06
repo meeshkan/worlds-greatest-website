@@ -5,6 +5,6 @@ templateClass: tmpl-post
 <h1>{{ title }}</h1>
 
 {% if author %}
-By <a href="{{ authorLink }}">{{ author }}</a>
+By <a href="{{ authorLink }}">{{ author }}</a> {% if author2 %}and <a href="{{ authorLink2 }}">{{ author2 }}</a>{% endif %}
 {% endif %}
 {{ content | safe }}

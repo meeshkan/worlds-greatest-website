@@ -3,7 +3,7 @@
     <em>
         {{ post.date | readableDate }}
         {% if post.data.author %} 
-            &mdash; {{ post.data.author }} 
+            &mdash; {{ post.data.author }} {% if post.data.author2 %}and {{ post.data.author2 }}{% endif %}
         {% endif %}
     </em>
 {% endfor %}
