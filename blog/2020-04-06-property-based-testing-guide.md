@@ -144,7 +144,6 @@ from hypothesis import given, settings
 @settings(max_examples=10000)
 def test_sort_this_list_properties(input_list):
     sorted_list = sorted(input_list)
-    return sorted_list
 
     # Regardless of input, sorting should never change the size:
     assert len(sorted_list) == len(input_list)
