@@ -1,27 +1,9 @@
 # worlds-greatest-website
 
-[![CircleCI](https://circleci.com/gh/meeshkan/worlds-greatest-website.svg?style=svg)](https://circleci.com/gh/Meeshkan/worlds-greatest-website)
+⚠️ The Meeshkan website has moved to [meeshkan/website](https://github.com/meeshkan/website/).
 
-Thanks for checking out the [world's greatest website](http://meeshkan.com). We use [11ty](https://github.com/11ty/eleventy). Pull requests welcome!
+This repository houses our old website, built with [11ty](https://github.com/11ty/eleventy).
 
-## Development
+Please enjoy this screenshot in memoriam:
 
-Install dependencies:
-
-```bash
-$ npm i
-```
-
-Run build:
-
-```bash
-$ npm run build
-```
-
-Serve site with hot reload:
-
-```bash
-$ npm run serve
-```
-
-See other available scripts in [package.json](./package.json).
+<img width="588" alt="The former Meeshkan website, that doesn't have any CSS so it looks like it was hacked." src="https://user-images.githubusercontent.com/26869552/78920012-120f5f80-7a93-11ea-952f-4dc8ff9558d0.png">
